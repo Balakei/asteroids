@@ -11,11 +11,15 @@ def main():
 	screen.fill((0, 0, 0))
 	pygame.display.flip()
 
+	clock = pygame.time.Clock()
+	dt = 0
+
 	running = True
 	while running:
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				running = False
+		dt = clock.tick(60) / 1000.0
 
 pygame.quit()
 
