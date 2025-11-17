@@ -62,7 +62,7 @@ def main():
 				if shot.collides_with(asteroid):
 					log_event("asteroid_shot")
 					obj.kill()
-					asteroid.kill()
+					asteroid.split()
 
 		for obj in drawable:
 			obj.draw(screen)
